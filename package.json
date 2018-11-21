@@ -1,6 +1,7 @@
 {
-	"name": "clinq-hubspot",
+	"name": "clinq-bridge-weclapp",
 	"version": "1.0.0",
+	"private": true,
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
@@ -8,6 +9,6 @@
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
-		"@clinq/bridge": "^3.2.0"
+		"@clinq/bridge": "^5.1.1"
 	}
 }
