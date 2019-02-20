@@ -1,17 +1,14 @@
-const clinq = require("@clinq/bridge");
-const ClinqLoader = require("./lib/clinq-loader");
-const ClinqAdapter = require("./lib/adapters/clinq-adapter-weclapp");
-const clinqLoader = new ClinqLoader(ClinqAdapter);
+const { start, ServerError } = require("@clinq/bridge");
+const WeclappClient = require("./lib/weclapp-client");
 
 const adapter = {
 	getContacts: async ({ apiKey, apiUrl }) => {
 		try {
-			const contacts = await clinqLoader.fetchContacts(apiKey, apiUrl);
-			return contacts;
+			return await new WeclappClient(apiUrl, apiKey).getContacts();
 		} catch (error) {
-			clinq.unauthorized();
+			throw new ServerError(401);
 		}
 	}
 };
 
-clinq.start(adapter);
+start(adapter);
