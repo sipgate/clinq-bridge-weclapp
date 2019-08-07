@@ -1,14 +1,14 @@
 {
-	"name": "clinq-bridge-weclapp",
-	"version": "1.0.0",
-	"private": true,
-	"main": "index.js",
-	"license": "MIT",
-	"scripts": {
-		"start": "node index.js"
-	},
-	"dependencies": {
-		"@clinq/bridge": "^10.0.3",
-		"axios": "^0.18.0"
-	}
+  "name": "clinq-bridge-weclapp",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@clinq/bridge": "^10.1.2",
+    "axios": "^0.18.0"
+  }
 }
