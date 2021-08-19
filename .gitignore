@@ -3,3 +3,4 @@ package-lock.json
 .DS_*
 k8s/secrets.yml
 k8s/prod.yml
+.vscode
